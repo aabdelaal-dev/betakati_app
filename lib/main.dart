@@ -42,54 +42,46 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              SizedBox(
+                width: 200,
+                height: 20,
+                child: Divider(
+                  color: Colors.cyan[100],
+                ),
+              ),
               Card(
-                color: Colors.white,
-                margin: EdgeInsets.all(20),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.phone,
-                        color: Colors.cyan[300],
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        '+20 1090243709',
-                        style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 20,
-                          fontFamily: 'Cairo',
-                          letterSpacing: .6,
-                        ),
-                      ),
-                    ],
+                margin: EdgeInsets.all(10),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.cyan[300],
+                  ),
+                  title: Text(
+                    '+20 1090243709',
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 20,
+                      fontFamily: 'Cairo',
+                      letterSpacing: .6,
+                    ),
                   ),
                 ),
               ),
               Card(
-                margin: EdgeInsets.all(20),
-                color: Colors.white,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.email,
-                        color: Colors.cyan[500],
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        'aabdelaal.dev@gmail.com',
-                        style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 20,
-                          fontFamily: 'Cairo',
-                          letterSpacing: .6,
-                        ),
-                      ),
-                    ],
+                margin: EdgeInsets.all(10),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.cyan[500],
+                  ),
+                  title: Text(
+                    'aabdelaal.dev@gmail.com',
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 20,
+                      fontFamily: 'Cairo',
+                      letterSpacing: .6,
+                    ),
                   ),
                 ),
               ),
