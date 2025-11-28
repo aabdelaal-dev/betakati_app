@@ -11,33 +11,85 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.cyan[700],
         body: SafeArea(
-          child: Row(
-            //  verticalDirection: VerticalDirection.down,
-            //  mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,           
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 100,
-                height: 100,
-                color:Colors.amber,
-                child: Text('Container 1'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage(
+                  'images/My_Photo.jpg',
+                ),
+              ),
+              Text(
+                'احمد عبد العال',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'Cairo',
+                  color: Colors.white,
+                  letterSpacing: .8,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'مبرمج تطبيقات',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.amber[100],
+                  fontFamily: 'Cairo',
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Container(
-                width: 100,
-                height: 500,
-                color: Colors.red,
-                child: Text('Container 2'),
-              ),
-              Container(
-                width: 100,
-                height: 100,
                 color: Colors.white,
-                child: Text('Container 3'),
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.cyan[300],
+                    ),
+                    SizedBox(width: 20),
+                    Text(
+                      '+20 1090243709',
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 20,
+                        fontFamily: 'Cairo',
+                        letterSpacing: .6,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-
+              Container(
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(10),
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      color: Colors.cyan[500],
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      'aabdelaal.dev@gmail.com',
+                      style:TextStyle(
+                        color: Colors.black87,
+                        fontSize: 20,
+                        fontFamily: 'Cairo',
+                        letterSpacing: .6,
+                      ) ,
+                    )
+                  ],
+                ),                
+              ),
             ],
           ),
         ),
@@ -45,12 +97,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-// Container(
-//             color: Colors.white,
-//             width:0.0,
-//             height: 200.0,
-//             margin: EdgeInsets.fromLTRB(20, 50, 0, 20),
-//             // padding: EdgeInsets.fromLTRB(45, 90, 45, 90),
-//             padding: EdgeInsets.symmetric(vertical: 90, horizontal: 45),
-//             child: Text('My Container'),
-//           ),
